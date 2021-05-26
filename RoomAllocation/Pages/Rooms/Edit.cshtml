@@ -1,0 +1,65 @@
+﻿@page
+@model RoomAllocation.Pages.Rooms.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Room</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Room.RoomID" />
+            <div class="form-group">
+                <label asp-for="Room.RoomNumber" class="control-label"></label>
+                <input asp-for="Room.RoomNumber" class="form-control" />
+                <span asp-validation-for="Room.RoomNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.Block" class="control-label"></label>
+                <input asp-for="Room.Block" class="form-control" />
+                <span asp-validation-for="Room.Block" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.PeriodOneClass" class="control-label"></label>
+                <input asp-for="Room.PeriodOneClass" class="form-control" />
+                <span asp-validation-for="Room.PeriodOneClass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.PeriodTwoClass" class="control-label"></label>
+                <input asp-for="Room.PeriodTwoClass" class="form-control" />
+                <span asp-validation-for="Room.PeriodTwoClass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.PeriodThreeClass" class="control-label"></label>
+                <input asp-for="Room.PeriodThreeClass" class="form-control" />
+                <span asp-validation-for="Room.PeriodThreeClass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.PeriodFourClass" class="control-label"></label>
+                <input asp-for="Room.PeriodFourClass" class="form-control" />
+                <span asp-validation-for="Room.PeriodFourClass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.PeriodFiveClass" class="control-label"></label>
+                <input asp-for="Room.PeriodFiveClass" class="form-control" />
+                <span asp-validation-for="Room.PeriodFiveClass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

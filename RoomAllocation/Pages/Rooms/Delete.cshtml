@@ -1,0 +1,64 @@
+﻿@page
+@model RoomAllocation.Pages.Rooms.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Room</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.RoomNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Room.RoomNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.Block)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Room.Block)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.PeriodOneClass)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Room.PeriodOneClass)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.PeriodTwoClass)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Room.PeriodTwoClass)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.PeriodThreeClass)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Room.PeriodThreeClass)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.PeriodFourClass)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Room.PeriodFourClass)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.PeriodFiveClass)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Room.PeriodFiveClass)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Room.RoomID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
