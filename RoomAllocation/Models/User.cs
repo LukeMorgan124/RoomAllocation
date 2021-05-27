@@ -9,7 +9,7 @@ namespace RoomAllocation.Models
     {
         public int UserID { get; set; }
         public string Username { get; set; }
-        public int Password { get; set; }
+        public string Password { get; set; }
         public bool Admin { get; set; }
         public ICollection<ListRoom> ListRooms { get; set; }
     }

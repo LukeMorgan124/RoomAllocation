@@ -9,7 +9,8 @@ namespace RoomAllocation.Data
     {
         public static void Initialize(RoomAllocationContext context)
         {
-            context.Database.EnsureCreated();
+            //context.Database.EnsureCreated();
+            DbInitializer.Initialize(context);
 
             // Look for any students.
             if (context.Users.Any())
@@ -19,6 +20,7 @@ namespace RoomAllocation.Data
 
             var users = new User[]
             {
+                new User {Username = "ac107242", Password = "123", Admin = true}
  
             };
 
@@ -27,10 +29,10 @@ namespace RoomAllocation.Data
 
             var rooms = new Room[]
             {
+                new Room { RoomNumber = 1, Block = 'A', PeriodOneClass = "11ENG-GRP", PeriodTwoClass = "Empty", PeriodThreeClass = "9DRA-HYR", PeriodFourClass = "12MUS-YBO", PeriodFiveClass = "Empty"}
             };
-
-            context.Rooms.AddRange(rooms);
             context.SaveChanges();
+            context.Rooms.AddRange(rooms);
 
             var listrooms = new ListRoom[]
             {
